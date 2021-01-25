@@ -5,7 +5,11 @@ const schema = new mongoose.Schema({
     frequency: String,
     treatment_time_in_days: Number,
     effective_date: Date,
-    expiration_date: Date,
+    expiration_date: {
+	  type: Date,
+	  required: function(){
+		return this.expiration_date >= this.effective_date;
+	  },
     drug: {type: Schema.Types.ObjectId, ref: 'Drug'}
 });
 
