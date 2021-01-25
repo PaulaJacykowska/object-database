@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const bedroomSchema = new mongoose.Schema({
-  bedNumber: String,
+  bed_number: String,
 });
 
 const Bed = mongoose.model('Bed', bedroomSchema);
