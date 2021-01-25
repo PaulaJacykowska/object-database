@@ -17,6 +17,11 @@ const schema = new mongoose.Schema({
     dosages: [{type: Schema.Types.ObjectId, ref: 'Dosage'}]
 });
 
+schema.statics.prolongate = function(newDate) {
+    if (newDate > this.expiration_date)
+        this.expiration_date = newDate
+  };
+
 const Prescription = mongoose.model('Prescription', schema);
 
 module.exports = Prescription;
