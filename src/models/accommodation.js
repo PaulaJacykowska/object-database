@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
 const accommodationSchema = new mongoose.Schema({
-  startDate: Date,
-  endDate: Date,
+  start_date: Date,
+  end_date: Date,
   bed: { type: mongoose.Schema.Types.ObjectId, ref: 'Bed' }
 });
 

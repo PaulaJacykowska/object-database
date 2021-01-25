@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
 const roomSchema = new mongoose.Schema({
-  roomNumber: String,
-  maxBedsCount: Number,
+  room_number: String,
+  max_beds_count: Number,
   rooms: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Bed' }]
 });
 

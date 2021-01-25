@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
 const hospitalizationSchema = new mongoose.Schema({
-  startDate: Date,
-  endDate: Date,
+  start_date: Date,
+  end_date: Date,
   bed: { type: mongoose.Schema.Types.ObjectId, ref: 'Bed' },
-  isVoluntary: Boolean,
+  is_voluntary: Boolean,
   accommodations: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Accommodation' }]
 });
 
